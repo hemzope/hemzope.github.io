@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hem Zope – It's Me!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warmIvory: '#F5F3ED',
+                        charcoal: '#252725',
+                        mutedGrey: '#777970',
+                        terracotta: '#BD765C',
+                        sageGreen: '#788B78',
+                        lightCard: '#EFECE4',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #F5F3ED;
+            color: #252725;
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5F3ED;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #BD765C;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-terracotta selection:text-white">
+
+    <!-- Top Navbar -->
+    <header class="sticky top-0 z-50 bg-[#F5F3ED]/90 backdrop-blur-md border-b border-[#E0DED7]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Brand / Logo -->
+                <a href="./" class="text-xl font-bold tracking-tight text-charcoal hover:text-terracotta transition-colors">
+                    Hem Zope<span class="text-terracotta">.</span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium text-mutedGrey">
+                    <a href="./" class="text-charcoal hover:text-terracotta transition-colors">Home</a>
+                    <a href="#about" class="hover:text-terracotta transition-colors">About</a>
+                    <a href="#projects" class="hover:text-terracotta transition-colors">Projects</a>
+                    <a href="./error" class="hover:text-terracotta transition-colors">Experiences</a>
+                    <a href="./error" class="hover:text-terracotta transition-colors">Photography</a>
+                    <a href="./error" class="hover:text-terracotta transition-colors">Music</a>
+                    <a href="#contact" class="px-4 py-2 rounded-full bg-terracotta text-white hover:bg-opacity-90 transition-all shadow-sm">Contact</a>
+                </nav>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="menu-btn" aria-label="Toggle Navigation Menu" class="text-charcoal focus:outline-none p-2 rounded-lg hover:bg-[#EAE6DD] transition-colors">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden border-b border-[#E0DED7] bg-warmIvory px-4 pt-2 pb-6 space-y-3 transition-all duration-300 shadow-lg">
+            <a href="./" class="block py-2 text-charcoal font-medium hover:text-terracotta">Home</a>
+            <a href="#about" class="block py-2 text-mutedGrey font-medium hover:text-terracotta">About</a>
+            <a href="#projects" class="block py-2 text-mutedGrey font-medium hover:text-terracotta">Projects</a>
+            <a href="./error" class="block py-2 text-mutedGrey font-medium hover:text-terracotta">Experiences</a>
+            <a href="./error" class="block py-2 text-mutedGrey font-medium hover:text-terracotta">Photography</a>
+            <a href="#contact" class="inline-block mt-2 w-full text-center px-4 py-2.5 rounded-lg bg-terracotta text-white font-medium shadow-sm">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 md:pt-24 md:pb-32 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="flex-1 space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sageGreen/15 text-sageGreen text-xs font-semibold tracking-wide uppercase">
+                    <span class="w-2 h-2 rounded-full bg-sageGreen animate-pulse"></span> ALWAYS OPEN TO COLLABORATION
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-charcoal leading-[1.1]">
+                    A Curious Explorer
+                </h1>
+                <p class="text-lg sm:text-xl text-mutedGrey max-w-xl mx-auto md:mx-0 font-normal leading-relaxed">
+                    Hi, I'm Hem Zope. Curious about technology, science, creativity and the world around me. I enjoy building things, exploring ideas and documenting the journey.
+                </p>
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+                    <a href="#projects" class="px-6 py-3 rounded-full bg-terracotta text-white font-medium hover:bg-opacity-90 transition-all shadow-md shadow-terracotta/20 flex items-center gap-2">
+                        Explore Work <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                    <a href="#contact" class="px-6 py-3 rounded-full border border-mutedGrey/30 text-charcoal font-medium hover:border-terracotta hover:text-terracotta transition-all">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Photograph / Avatar Card -->
+            <div class="flex-shrink-0 relative group">
+                <div class="absolute -inset-2 bg-gradient-to-tr from-terracotta/30 to-sageGreen/30 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
+                <div class="relative w-72 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-lightCard">
+                    <img src="assets/hem_1.jpg" alt="Hem Zope" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/600x750/788B78/ffffff?text=Hem+Zope'">
+                    <div class="absolute bottom-4 left-4 right-4 bg-warmIvory/90 backdrop-blur-md p-3 rounded-xl border border-[#E0DED7] flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-mutedGrey font-medium">Based in</p>
+                            <p class="text-sm font-semibold text-charcoal">Pune, Maharashtra</p>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-terracotta/15 flex items-center justify-center text-terracotta">
+                            <i class="fa-solid fa-location-dot text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Snippet Section -->
+        <section id="about" class="py-20 border-t border-[#E0DED7] bg-[#EFECE4]/50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="space-y-4">
+                    <span class="text-xs font-semibold tracking-wider text-terracotta uppercase">About Me</span>
+                    <h2 class="text-3xl font-bold tracking-tight text-charcoal">Curious by Nature. Creative by Instinct. <br> Always Exploring.</h2>
+                </div>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                    <div class="md:col-span-2 space-y-4 text-mutedGrey leading-relaxed text-base sm:text-lg">
+                        <p>
+                            Hello! I am Hem Zope, a curious mind with an inclination towards exploring, creating and experimenting. 
+                            I have never been particularly good at sticking to just one interest, nor do I intend to be.
+                            Whether it is writing a program, experimenting with electronics, exploring the night sky, capturing a photograph or working on a creative project, I enjoy the process of discovering something new. 
+                            For me, learning goes beyond textbooks; it is about asking questions, trying things out and making sense of the world.
+
+                        </p>
+                        <div class="pt-2">
+                            <a href="./error" class="inline-flex items-center gap-2 text-sageGreen font-semibold hover:underline">
+                                Read Full Bio & Background <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-warmIvory border border-[#E0DED7] shadow-sm space-y-4">
+                        <h3 class="text-sm font-bold text-charcoal uppercase tracking-wider">Core Interests</h3>
+                        <ul class="space-y-2.5 text-sm text-mutedGrey">
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-terracotta text-xs"></i> Technology & Software
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-terracotta text-xs"></i> Astronomy, Astrophysics & Space Exploration
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-terracotta text-xs"></i> Macro & Landscape Photography
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-terracotta text-xs"></i> Open Source Work & Community Collaboration
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-terracotta text-xs"></i> Urban Hiking & Cycling
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-terracotta text-xs"></i> Digital Music Composition
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Projects Section -->
+        <section id="projects" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-semibold tracking-wider text-terracotta uppercase">Portfolio</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-charcoal mt-1">My Projects</h2>
+                </div>
+                <p class="text-mutedGrey max-w-sm mt-3 md:mt-0 text-sm">
+                    A curated selection of web applications, design systems, and creative tools built with precision.
+                </p>
+            </div>
+
+            <!-- Four Project Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="group bg-[#EFECE4] rounded-2xl overflow-hidden border border-[#E0DED7] hover:border-terracotta transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden bg-warmIvory relative">
+                            <img src="https://placehold.co/800x500/BD765C/ffffff?text=WhisprLink" alt="WhisprLink" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-warmIvory/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-charcoal">
+                                Web App
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">HTML</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">CSS</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">JavaScript</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">Supabase</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">Auth</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-charcoal group-hover:text-terracotta transition-colors">WhisprLink</h3>
+                            <p class="text-mutedGrey text-sm leading-relaxed">
+                                A chat service created as a temporary replacement to Google Chat for personal use. 
+                                This becomes my first public project where other people use my software.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-[#E0DED7]/50 pt-4 mt-2">
+                        <a href="./error" class="text-sm font-semibold text-charcoal hover:text-terracotta flex items-center gap-1.5 transition-colors">
+                            View Full Story <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="https://github.com/hemzope" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" class="w-9 h-9 rounded-full bg-warmIvory flex items-center justify-center text-mutedGrey hover:text-charcoal hover:bg-[#E0DED7] transition-all">
+                            <i class="fa-brands fa-github text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group bg-[#EFECE4] rounded-2xl overflow-hidden border border-[#E0DED7] hover:border-terracotta transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden bg-warmIvory relative">
+                            <img src="assets/hl_core_logo.png" alt="Helyx Core" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-warmIvory/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-charcoal">
+                                Windows App
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 bg-warmIvory text-sageGreen text-xs font-medium rounded-md">Frontend</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">Python</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">Supabase</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">Gemini API</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">Auth</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">Spotify Integration</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-charcoal group-hover:text-terracotta transition-colors">Helyx Core</h3>
+                            <p class="text-mutedGrey text-sm leading-relaxed">
+                                A proof-of-concept desktop application integrating AI, music, authentication and file management for everyday people.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-[#E0DED7]/50 pt-4 mt-2">
+                        <a href="./error" class="text-sm font-semibold text-charcoal hover:text-terracotta flex items-center gap-1.5 transition-colors">
+                            View Full Story <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="https://github.com/hemzope" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" class="w-9 h-9 rounded-full bg-warmIvory flex items-center justify-center text-mutedGrey hover:text-charcoal hover:bg-[#E0DED7] transition-all">
+                            <i class="fa-brands fa-github text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group bg-[#EFECE4] rounded-2xl overflow-hidden border border-[#E0DED7] hover:border-terracotta transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden bg-warmIvory relative">
+                            <img src="assets/spectra_logo.png" alt="Spectra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-warmIvory/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-charcoal">
+                                AI Browser
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 bg-warmIvory text-terracotta text-xs font-medium rounded-md">Node.js</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-terracotta text-xs font-medium rounded-md">Electron</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">Groq</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">Supabase</span>
+                                <span class="px-2.5 py-1 bg-warmIvory text-mutedGrey text-xs font-medium rounded-md">Cloudflare Workers</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-charcoal group-hover:text-terracotta transition-colors">Spectra Browser</h3>
+                            <p class="text-mutedGrey text-sm leading-relaxed">
+                                A desktop browser application that leverages AI to provide contextual search, summarization, and content discovery for users seeking efficient web navigation.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-[#E0DED7]/50 pt-4 mt-2">
+                        <a href="./error" class="text-sm font-semibold text-charcoal hover:text-terracotta flex items-center gap-1.5 transition-colors">
+                            View All Features <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="https://github.com/hemzope" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" class="w-9 h-9 rounded-full bg-warmIvory flex items-center justify-center text-mutedGrey hover:text-charcoal hover:bg-[#E0DED7] transition-all">
+                            <i class="fa-brands fa-github text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group bg-[#EFECE4] rounded-2xl overflow-hidden border border-[#E0DED7] hover:border-terracotta transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="h-56 overflow-hidden bg-warmIvory relative">
+                            <img src="https://placehold.co/800x500/BD765C/ffffff?text=Sutra Code" alt="Echo Sound Archives" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute top-3 right-3 bg-warmIvory/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-charcoal">
+                                Coding Language
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2.5 py-1 bg-warmIvory text-terracotta text-xs font-medium rounded-md">Python</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-charcoal group-hover:text-terracotta transition-colors">Sutra Code</h3>
+                            <p class="text-mutedGrey text-sm leading-relaxed">
+                                A programming language leveraging the advantages of Sanskrit to make a better programming language while also making DATA, FUNCTIONS, LOOPS, and COMMANDS first-class concepts.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex items-center justify-between border-t border-[#E0DED7]/50 pt-4 mt-2">
+                        <a href="./error" class="text-sm font-semibold text-charcoal hover:text-terracotta flex items-center gap-1.5 transition-colors">
+                            View Documentation <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="https://github.com/hemzope" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" class="w-9 h-9 rounded-full bg-warmIvory flex items-center justify-center text-mutedGrey hover:text-charcoal hover:bg-[#E0DED7] transition-all">
+                            <i class="fa-brands fa-github text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+<!-- 
+        <section id="experiences" class="py-24 bg-[#EFECE4]/50 border-y border-[#E0DED7]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-3 mb-16">
+                    <span class="text-xs font-semibold tracking-wider text-terracotta uppercase">Career & Journey</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-charcoal">Beyond Projects</h2>
+                    <p class="text-mutedGrey max-w-lg mx-auto text-sm">
+                        Milestones, professional roles, and key moments that shaped my trajectory in technology and design.
+                    </p>
+                </div>
+
+                <div class="relative border-l-2 border-sageGreen/40 ml-4 sm:ml-8 space-y-12">
+                    
+                    <div class="relative pl-8 sm:pl-10 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-warmIvory border-4 border-terracotta group-hover:scale-125 transition-transform"></div>
+                        <div class="space-y-2">
+                            <span class="inline-block px-3 py-1 bg-terracotta/10 text-terracotta text-xs font-semibold rounded-full">2024 — Present</span>
+                            <h3 class="text-xl font-bold text-charcoal">Senior Creative Technologist</h3>
+                            <h4 class="text-sm font-medium text-sageGreen">Studio Lumen • San Francisco, CA</h4>
+                            <p class="text-mutedGrey text-sm leading-relaxed pt-1">
+                                Leading front-end architecture and interactive web experiences for global brand clients. Mentoring junior engineers and standardizing design system tokens across enterprise repositories.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 sm:pl-10 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-warmIvory border-4 border-sageGreen group-hover:scale-125 transition-transform"></div>
+                        <div class="space-y-2">
+                            <span class="inline-block px-3 py-1 bg-sageGreen/15 text-sageGreen text-xs font-semibold rounded-full">2022 — 2024</span>
+                            <h3 class="text-xl font-bold text-charcoal">Frontend Engineer & UI Designer</h3>
+                            <h4 class="text-sm font-medium text-sageGreen">Voxel Labs • Remote</h4>
+                            <p class="text-mutedGrey text-sm leading-relaxed pt-1">
+                                Spearheaded the redesign of core analytics dashboards using React and Tailwind CSS. Reduced bundle size by 38% and collaborated directly with product managers to streamline user onboarding flows.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 sm:pl-10 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-warmIvory border-4 border-mutedGrey group-hover:scale-125 transition-transform"></div>
+                        <div class="space-y-2">
+                            <span class="inline-block px-3 py-1 bg-mutedGrey/15 text-mutedGrey text-xs font-semibold rounded-full">2021 — 2022</span>
+                            <h3 class="text-xl font-bold text-charcoal">Open Source Contributor & Design Systems Fellow</h3>
+                            <h4 class="text-sm font-medium text-sageGreen">Mozilla Foundation Fellowship</h4>
+                            <p class="text-mutedGrey text-sm leading-relaxed pt-1">
+                                Researched accessible web components and contributed documentation and patches to widely adopted open source UI libraries. Spoke at regional meetups about ethical web design.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8 sm:pl-10 group">
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-warmIvory border-4 border-charcoal group-hover:scale-125 transition-transform"></div>
+                        <div class="space-y-2">
+                            <span class="inline-block px-3 py-1 bg-charcoal/10 text-charcoal text-xs font-semibold rounded-full">2020</span>
+                            <h3 class="text-xl font-bold text-charcoal">B.S. in Computer Science & Digital Arts</h3>
+                            <h4 class="text-sm font-medium text-sageGreen">University of California, Berkeley</h4>
+                            <p class="text-mutedGrey text-sm leading-relaxed pt-1">
+                                Graduated with honors, focusing coursework on human-computer interaction (HCI), computer graphics, and cognitive psychology.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+-->
+    
+        <section id="journal" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div id="photography" class="p-8 rounded-2xl bg-[#EFECE4] border border-[#E0DED7] space-y-4 hover:border-terracotta transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-sageGreen/20 flex items-center justify-center text-sageGreen text-lg">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-charcoal">Photography</h3>
+                    <p class="text-mutedGrey text-sm leading-relaxed">
+                        A curated gallery of my photography work, capturing moments from nature, landscapes and urban wildlife.
+                    </p>
+                    <div class="flex items-center border-t border-[#E0DED7]/50 pt-4 mt-2">
+                        <a href="https://unsplash.com/@hemzope" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" class="h-9 p-3 text-sm font-semibold text-charcoal rounded-full bg-warmIvory flex items-center justify-center hover:bg-[#E0DED7] hover:text-terracotta transition-all">
+                            <i class="fa-brands fa-unsplash text-sm"></i>&nbsp;&nbsp;&nbsp;View Gallery&nbsp;&nbsp;<i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-8 rounded-2xl bg-[#EFECE4] border border-[#E0DED7] space-y-4 hover:border-terracotta transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-terracotta/15 flex items-center justify-center text-terracotta text-lg">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-charcoal">Music</h3>
+                    <p class="text-mutedGrey text-sm leading-relaxed">
+                        A collection of digitally composed music tracks that you can listen to and enjoy.
+                    </p>
+                    <div class="flex items-center border-t border-[#E0DED7]/50 pt-4 mt-2">
+                        <a href="https://bandlab.com/hem_zope" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository" class="h-9 p-3 text-sm font-semibold text-charcoal rounded-full bg-warmIvory flex items-center justify-center hover:bg-[#E0DED7] hover:text-terracotta transition-all">
+                            <i class="fa-solid fa-music text-sm"></i>&nbsp;&nbsp;&nbsp;Listen to Tracks&nbsp;&nbsp;<i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-[#EFECE4]/70 border-t border-[#E0DED7]">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+                <span class="text-xs font-semibold tracking-wider text-terracotta uppercase">Get In Touch</span>
+                <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-charcoal">Let's build something remarkable together.</h2>
+                <p class="text-mutedGrey text-base sm:text-lg max-w-xl mx-auto">
+                    Whether you have an exciting project in mind, a melody, a few photographs, or simply want to chat about code—my inbox is always open.
+                </p>
+                <div class="pt-4 flex flex-wrap justify-center gap-4">
+                    <a href="mailto:hemzope.agreeable575@passinbox.com" class="px-8 py-4 rounded-full bg-terracotta text-white font-medium hover:bg-opacity-90 transition-all shadow-lg shadow-terracotta/20 flex items-center gap-2">
+                        <i class="fa-regular fa-envelope text-sm"></i> hemzope.agreeable575@passinbox.com
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-warmIvory py-16 border-t border-[#333533]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+            
+            <div class="space-y-2 text-center md:text-left">
+                <a href="#home" class="text-xl font-bold tracking-tight text-warmIvory hover:text-terracotta transition-colors">
+                    Hem Zope<span class="text-terracotta">.</span>
+                </a>
+                <p class="text-xs text-[#999B94]">
+                    
+                </p>
+            </div>
+
+            <!-- Social Profile Links -->
+            <div class="flex items-center space-x-5 text-lg">
+                <a href="https://github.com/hemzope" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-10 h-10 rounded-full bg-[#333533] flex items-center justify-center text-warmIvory hover:bg-terracotta hover:text-white transition-all">
+                    <i class="fa-brands fa-github text-sm"></i>
+                </a>
+                <a href="https://unsplash.com/@hemzope" target="_blank" rel="noopener noreferrer" aria-label="Unsplash" class="w-10 h-10 rounded-full bg-[#333533] flex items-center justify-center text-warmIvory hover:bg-terracotta hover:text-white transition-all">
+                    <i class="fa-brands fa-unsplash text-sm"></i>
+                </a>
+                <a href="https://bandlab.com/hem_zope" target="_blank" rel="noopener noreferrer" aria-label="Bandlab" class="w-10 h-10 rounded-full bg-[#333533] flex items-center justify-center text-warmIvory hover:bg-terracotta hover:text-white transition-all">
+                    <i class="fa-solid fa-music text-sm"></i>
+                </a>
+                <a href="mailto:hemzope.agreeable575@passinbox.com" aria-label="Email" class="w-10 h-10 rounded-full bg-[#333533] flex items-center justify-center text-warmIvory hover:bg-terracotta hover:text-white transition-all">
+                    <i class="fa-regular fa-envelope text-sm"></i>
+                </a>
+            </div>
+
+            <div class="text-xs text-[#999B94] text-center md:text-right">
+                <p>&copy; 2026 Hem Zope. All rights reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Hamburger Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            // Toggle menu visibility
+            menuBtn.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+                const icon = menuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+
+            // Close mobile menu when clicking any navigation link
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.add('hidden');
+                    const icon = menuBtn.querySelector('i');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
